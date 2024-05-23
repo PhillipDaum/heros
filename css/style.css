@@ -1,0 +1,29 @@
+:root {
+    --grass-background: #AFC97E;
+    --grass-border: #4F5D2F;
+    --rock-background:#A78682;
+    --rock-border:#51344D;
+    --water-background:#058ED9;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+/* grass cell */
+#cell-6 {
+    background-color: var(--grass-background);
+    border: dashed .18rem var(--grass-border);
+}
+/* water cell */
+#cell-35 {
+    background-color: var(--water-background);
+}
+/* stone cell */
+#cell-99 {
+    background-color: var(--rock-background);
+    border: .33rem solid var(--rock-border);
+}
+/* :is(div) {
+    border: red 2px solid;
+} */

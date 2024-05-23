@@ -1,0 +1,111 @@
+const heros = [heros[i]] - however many heros there are
+
+
+
+const rooms = [
+    {
+        description: 10x10 square with some bushes
+    }
+]
+
+// item cards
+const items = [
+    {
+        description: "short sword";
+        class: "weapon";
+        requirements: {str: 2, wis: 1, agl: 2, }
+    }
+    {
+        description: "healing potion";
+        class: "weapon";
+        requirements: {};
+        effects: 
+    }
+
+
+]
+
+//functions
+
+function rollDSix() {
+    let dsix = Math.floor(Math.random()*6);
+    console.log
+}
+
+function encounterBadGuys() {
+
+}
+
+//encounter cards
+const ecounterCards = [
+    {
+        description: "";
+     //different function calls
+     badGuys: encounterBadguys()
+    }
+]
+
+//Monsters
+
+//The hero
+const theHero = {
+    heros(u);
+}
+
+//heros
+const heros
+
+for (i < 99 i + + ... that thing
+createElementbyid(div)
+that other stuff in here
+append child;
+// also can create ids for each DOM object here. 
+we can put an x in a p tag in each one at first, then later make it invisible
+
+// this is the javascript to change the css of the grid.
+<script>
+document.getElementById("p2").style.color = "blue";
+</script>
+
+
+
+if i was gonna draw a sqoare
+CSS 
+display: grid;
+grid-template-columns: repeat(10 1fr); - check syntax
+grid-template-rows: 10
+
+
+// gameboard
+/// corners: 0, 9, 89, 99
+for (let i = 0; i < 99; i++) {
+
+}
+
+document.createElement('div');
+// I want the div to have a child
+// the child is a template literal
+// the variabiles are 
+
+for (let i = 0; i < 99; i++) {
+    document.createElement('div');
+
+}
+
+let contents = document.createElement('p');
+contents.textContent = "x";
+contents.id = i;
+console.log(i); 
+
+card
+
+border-bottom
+
+document
+colors
+
+variabless
+grass 
+water very light outline
+rock grey with outline
+asteriscs border is inpenitrable trees
