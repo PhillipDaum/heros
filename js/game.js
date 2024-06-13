@@ -4,17 +4,19 @@
 function roomGen() {
 for (let i = 0; i < 100; i++) {
    let cell = document.createElement('div');
+   cell.className = "cell";
    cell.id = "cell-"+i;
    document.getElementById("game").appendChild(cell);
    //right now contents is hardcoded to an x in a p tag
-   let contents = document.createElement("div");
-   contents.innerHTML = "x";
-   document.getElementById("cell-"+i).appendChild(contents);
+//    let contents = document.createElement("div");
+//     //maybe use text-content, not innerHTML
+//    contents.innerHTML = "x";
+//    document.getElementById("cell-"+i).appendChild(contents);
 };
 }
 roomGen();
 
-document.getElementById("cell-06").innerHTML = '<i class="fa-solid fa-user-astronaut"></i>';
+// document.getElementById("cell-06").innerHTML = '<i class="fa-solid fa-user-astronaut"></i>';
 
 // I want the div to have a child
 // the child is a template litera

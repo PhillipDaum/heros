@@ -5,10 +5,19 @@
     --rock-border:#51344D;
     --water-background:#058ED9;
 }
-
+h1 {
+    text-align: center;
+}
+.game-wrapper {
+    padding: 3rem;
+}
 .container {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
+}
+.cell {
+    width: 10%;
+    height: 10%;
 }
 /* grass cell */
 #cell-6 {
