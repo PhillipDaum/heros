@@ -1,38 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 :root {
+    /* change room and body background color */
+    --font-main: "Roboto Mono", monospace;
+    --body-background: #00171f;
+    --room-background:   #DDFFD9; 
+    --card-background: #f3e9c7;
+    --card-border: #6E6600;  /* olive */
     --grass-background: #AFC97E;
     --grass-border: #4F5D2F;
     --rock-background:#A78682;
     --rock-border:#51344D;
     --water-background:#058ED9;
+    /* obstacles and items */
+    --tree: #248232;
+    --metal: #685762;
+}
+/* default font, other fonts from JS will override this */
+body {
+    font-family: var(--font-main);
+    background-color: var(--body-background);
 }
 h1 {
-    text-align: center;
+text-align: center;
 }
 .game-wrapper {
     padding: 3rem;
 }
-.container {
+.title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.title-card {
+    background-color: var(--card-background);
+    border: .1rem solid var(--card-border);
+    border-radius: .2rem;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    width: 16rem;
+    height: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    box-shadow: 2rem 2rem 2rem .2rem;
+}
+h2 {
+    font-size: 1.3rem;
+}
+h3 {
+    text-align: center;
+}
+.game {
+    /* width: 100%;
+    margin: auto; */
+}
+.card {
+    background-color: var(--card-background);
+    width: 9rem;
+    height: 11rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    border: .1rem solid var(--card-border);
+    box-shadow: 2rem 2rem 2rem .2rem;
+    border-radius: .2rem;
+    /* change later when there are more features*/
+    cursor: pointer;
+}
+.card i {
+    font-size: 13rem;
+}
+.room {
+    background-color: var(--room-background);
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    gap: none;
+    margin: auto;
+    width: 50rem;
+    height: 50rem;
+    box-shadow: 2rem 2rem 2rem .2rem;
+    grid-template-columns: repeat(16, 1fr);
 }
 .cell {
-    width: 10%;
-    height: 10%;
+    display: flex;
+    justify-content: center;
+    margin: none;
+    width: 100%;
+    height: 100%;
+    border: 1px solid grey;
 }
-/* grass cell */
+/* intro page */
+.hero-select {
+    display: flex;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+/* grass cell
 #cell-6 {
     background-color: var(--grass-background);
     border: dashed .18rem var(--grass-border);
 }
 /* water cell */
-#cell-35 {
+/* #cell-35 {
     background-color: var(--water-background);
-}
+} */
 /* stone cell */
-#cell-99 {
+/* #cell-99 {
     background-color: var(--rock-background);
-    border: .33rem solid var(--rock-border);
-}
+    border: .33rem solid var(--rock-border); */
+/* } */ 
 /* :is(div) {
     border: red 2px solid;
 } */
