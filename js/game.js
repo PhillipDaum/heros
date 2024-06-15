@@ -70,11 +70,11 @@ function roomGen(r) {
 };
 roomGen(r);
 
-// function move() {
-//      if the id of the box is within the distance in 
-/// if they can move 6, it could be 
-//     if ();
-// }
+// function move
+// id# of the users cell
+// write an algorythm for movement with their respective speed
+// https://docs.google.com/spreadsheets/d/1L_qN0skXF_JS7OqvG1i-F-Sm4NJQByNoq8eK3doOsdE/edit?usp=sharing
+// `if cell id -${our thing}
 
 //six side die roll
 function rollSixSide() {
