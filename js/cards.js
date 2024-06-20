@@ -80,18 +80,6 @@ const items = [
 ]
 
 const heros = [
-    // {
-    //     name: "minstrel",
-    //     icon: "fa-something
-    // },
-    // {
-    //     name: "spy",
-    //     icon: "fa-user-secret"
-    // },
-    // {
-    //     name: "warrior",
-    //     icon: '<i class="fa-solid fa-user-ninja fa-2xl"></i>'
-    // },
     {
         name: "cleric",
         movementSpeed: 5,
@@ -99,13 +87,15 @@ const heros = [
     },
     {
         name: "scholar",
+        movementSpeed: 4,
         icon: '<i class="fa-solid fa-user-graduate fa-2xl"></i>'
     },
     {
         name: "astronaut",
+        movementSpeed: 6,
         icon: '<i class="fa-solid fa-user-astronaut fa-2xl"></i>'
     },
-]
+];
 
 
 const monsters = [

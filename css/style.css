@@ -14,6 +14,7 @@
     /* obstacles and items */
     --tree: #248232;
     --metal: #685762;
+    --highlight: #ffd781;
 }
 /* default font, other fonts from JS will override this */
 body {
@@ -49,10 +50,6 @@ h2 {
 }
 h3 {
     text-align: center;
-}
-.game {
-    /* width: 100%;
-    margin: auto; */
 }
 .card {
     background-color: var(--card-background);
@@ -96,6 +93,11 @@ h3 {
     align-content: center;
     justify-content: space-around;
 }
+/* highlights area around hero showing movement */
+.highlight {
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
 /* grass cell
 #cell-6 {
     background-color: var(--grass-background);

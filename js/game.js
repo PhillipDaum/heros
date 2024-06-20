@@ -3,21 +3,23 @@ let r;
 let h;
 let health;
 let userObj = [];
-// gameboard corners: 0, 9, 89, 100 it appends class game wrapper 
+// gameboard corners: 0, 15, 240, 255 it appends class game wrapper 
 
-// pushes chosen hero to user's array, clears top bar
+// pushes chosen hero to user's array, clears hero display, changes instructions
 const pickAHero = function() {
     let chosenHero = this.id;
     for (let i = 0; i < heros.length; i++) {
-        for (const property in heros[i]) {
-          if (heros[i][property] === chosenHero) {
+          if (heros[i].name === chosenHero) {
             userObj.push(heros[i]);
             console.log(userObj)
+            // do i need this?
+            break;
           }
-        }
       }
-      let topBar = document.getElementById("top-bar");
-      topBar.innerHTML="";
+      let removeHeros = document.getElementById("hero-select");
+      removeHeros.innerHTML= "";
+      let changeTitleCard = document.getElementById("insruction-card");
+      changeTitleCard.innerHTML="<h2>now pick a spot</h2>";
   }
 
 // shows heros to select
@@ -35,7 +37,7 @@ function displayHeros() {
 displayHeros();
 
 
-// puts hero in one spot on the board!
+// puts hero in one spot on the board, clears top bar
 //https://stackoverflow.com/questions/12713564/function-in-javascript-that-can-be-called-only-once
 var putHero = (function() {
     var executed = false;
@@ -46,6 +48,8 @@ var putHero = (function() {
             let icon = userObj[0].icon
             let put = document.getElementById(this.id);
             put.innerHTML = icon;
+            let changeTitleCard = document.getElementById("top-bar");
+            changeTitleCard.innerHTML="";
         }
     };
 })();
@@ -69,6 +73,9 @@ function roomGen(r) {
     }
 };
 roomGen(r);
+
+// highlight movement range around hero
+
 
 // function move
 // id# of the users cell
