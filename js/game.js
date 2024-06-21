@@ -58,6 +58,9 @@ var putHero = (function() {
 // generates a room
 // change for first room only to be able to pick a spot
 // toggle cell on click pointer
+// remove the on click pointer, use the other way of doing that
+// mmake a naming convention instead of r it will be like a, b, c, d, e, f....... 
+// or maybe a different ID, i dunno 
 function roomGen(r) {  
     let room = document.createElement("div");
     room.className = "room";
