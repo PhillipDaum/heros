@@ -6,21 +6,28 @@ let userObj = [];
 // gameboard corners: 0, 15, 240, 255 it appends class game wrapper 
 
 // pushes chosen hero to user's array, clears hero display, changes instructions
-const pickAHero = function() {
+const pickAHero = function () {
     let chosenHero = this.id;
     for (let i = 0; i < heros.length; i++) {
-          if (heros[i].name === chosenHero) {
+        if (heros[i].name === chosenHero) {
             userObj.push(heros[i]);
             console.log(userObj)
             // do i need this?
             break;
-          }
-      }
-      let removeHeros = document.getElementById("hero-select");
-      removeHeros.innerHTML= "";
-      let changeTitleCard = document.getElementById("insruction-card");
-      changeTitleCard.innerHTML="<h2>now pick a spot</h2>";
-  }
+        }
+    }
+    let removeHeros = document.getElementById("hero-select");
+    removeHeros.innerHTML = "";
+    let changeTitleCard = document.getElementById("insruction-card");
+    changeTitleCard.innerHTML = "<h2>now pick a spot</h2>";
+    roomGen(r);
+    // adds an event listener to all cells
+    document.querySelectorAll('.cell').forEach(cell => {
+        cell.addEventListener('click', putHero);
+        cell.addEventListener('mouseover', highlight01);
+        cell.addEventListener('mouseout', unHighlight);
+    });
+}
 
 // shows heros to select
 function displayHeros() {
@@ -37,19 +44,41 @@ function displayHeros() {
 displayHeros();
 
 
+// Define the highlight01 function
+function highlight01(event) {
+    let cell = event.target;
+    // Your logic for highlighting the cell on mouseover
+    cell.classList.add('highlight-01'); // Example logic to add highlight class
+}
+function unHighlight(event) {
+    let cell = event.target;
+    cell.classList.remove('highlight-01');
+}
+
+
 // puts hero in one spot on the board, clears top bar
-//https://stackoverflow.com/questions/12713564/function-in-javascript-that-can-be-called-only-once
-var putHero = (function() {
+// should this be an event??? 
+var putHero = (function () {
     var executed = false;
-    return function() {
+    return function () {
         if (!executed) {
             executed = true;
             // do something
             let icon = userObj[0].icon
-            let put = document.getElementById(this.id);
-            put.innerHTML = icon;
+            let currentCell = document.getElementById(this.id);
+            currentCell.innerHTML = icon;
             let changeTitleCard = document.getElementById("top-bar");
-            changeTitleCard.innerHTML="";
+            changeTitleCard.innerHTML = "";
+            document.querySelectorAll('.cell').forEach(cell => {
+                cell.removeEventListener('click', putHero);
+                cell.removeEventListener('mouseover', highlight01);
+                cell.removeEventListener('mouseout', unHighlight);
+                cell.addEventListener('click', moveHero);
+            });
+            let hero = userObj[0];
+            hero.position = currentCell.id;
+            // remove highlight from it
+            console.log(userObj);
         }
     };
 })();
@@ -61,38 +90,35 @@ var putHero = (function() {
 // remove the on click pointer, use the other way of doing that
 // mmake a naming convention instead of r it will be like a, b, c, d, e, f....... 
 // or maybe a different ID, i dunno 
-function roomGen(r) {  
+function roomGen(r) {
     let room = document.createElement("div");
     room.className = "room";
-    room.id = "room"+r;
+    room.id = "room" + r;
     // figure out how to get it to spawn rooms in the right spot
     document.getElementById("game").appendChild(room);
     for (var i = 0; i < 256; i++) {
         let cell = document.createElement('div');
         cell.className = "cell";
-        cell.id = "cell-"+i;
+        cell.id = "cell-" + i;
         cell.onclick = putHero;
-        document.getElementById("room"+r).appendChild(cell);
+        document.getElementById("room" + r).appendChild(cell);
     }
 };
-roomGen(r);
+
 
 // highlight movement range around hero
 
-
-// function move
-// id# of the users cell
-// write an algorythm for movement with their respective speed
-// https://docs.google.com/spreadsheets/d/1L_qN0skXF_JS7OqvG1i-F-Sm4NJQByNoq8eK3doOsdE/edit?usp=sharing
-// `if cell id -${our thing}
+const moveHero = function () {
+    console.log("hi");
+}
 
 //six side die roll
 function rollSixSide() {
     let deeSix = Math.floor(Math.random() * 6);
     console.log(deeSix);
-} 
-rollSixSide ();
+}
+rollSixSide();
 
-// functinos for damage
+// functions for damage
 
 // function for regenerating health

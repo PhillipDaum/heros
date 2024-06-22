@@ -1,37 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 :root {
     /* change room and body background color */
     --font-main: "Roboto Mono", monospace;
     --body-background: #00171f;
-    --room-background:   #DDFFD9; 
+    --room-background: #DDFFD9;
     --card-background: #f3e9c7;
-    --card-border: #6E6600;  /* olive */
+    --card-border: #6E6600;
+    /* olive */
     --grass-background: #AFC97E;
     --grass-border: #4F5D2F;
-    --rock-background:#A78682;
-    --rock-border:#51344D;
-    --water-background:#058ED9;
+    --rock-background: #A78682;
+    --rock-border: #51344D;
+    --water-background: #058ED9;
     /* obstacles and items */
     --tree: #248232;
     --metal: #685762;
-    --highlight: #ffd781;
+    --highlight-01: #ffd781;
+    --highlight-02: #ff96f1;
 }
+
 /* default font, other fonts from JS will override this */
 body {
     font-family: var(--font-main);
     background-color: var(--body-background);
 }
+
 h1 {
-text-align: center;
+    text-align: center;
 }
+
 .game-wrapper {
     padding: 3rem;
 }
+
 .title-wrapper {
     display: flex;
     justify-content: center;
     align-content: center;
 }
+
 .title-card {
     background-color: var(--card-background);
     border: .1rem solid var(--card-border);
@@ -45,12 +53,15 @@ text-align: center;
     margin-bottom: 4rem;
     box-shadow: 2rem 2rem 2rem .2rem;
 }
+
 h2 {
     font-size: 1.3rem;
 }
+
 h3 {
     text-align: center;
 }
+
 .card {
     background-color: var(--card-background);
     width: 9rem;
@@ -65,27 +76,32 @@ h3 {
     /* change later when there are more features*/
     cursor: pointer;
 }
+
 .card i {
     font-size: 13rem;
 }
+
 .room {
-    background-color: var(--room-background);
     display: grid;
     gap: none;
     margin: auto;
-    width: 50rem;
-    height: 50rem;
+    height: 48rem;
+    width: 48rem;
     box-shadow: 2rem 2rem 2rem .2rem;
     grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
 }
+
 .cell {
+    background-color: var(--room-background);
     display: flex;
     justify-content: center;
-    margin: none;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
     border: 1px solid grey;
 }
+
 /* intro page */
 .hero-select {
     display: flex;
@@ -93,9 +109,14 @@ h3 {
     align-content: center;
     justify-content: space-around;
 }
+
 /* highlights area around hero showing movement */
-.highlight {
-    background-color: rgba(0, 255, 0, 0.5);
+.highlight-01 {
+    background-color: var(--highlight-01);
+}
+
+.highlight-02 {
+    background-color: var(--highlight-02);
 }
 
 /* grass cell
@@ -111,7 +132,7 @@ h3 {
 /* #cell-99 {
     background-color: var(--rock-background);
     border: .33rem solid var(--rock-border); */
-/* } */ 
+/* } */
 /* :is(div) {
     border: red 2px solid;
 } */
