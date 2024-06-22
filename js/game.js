@@ -75,6 +75,7 @@ var putHero = (function () {
                 cell.removeEventListener('mouseout', unHighlight);
                 cell.addEventListener('click', moveHero);
             });
+            currentCell.classList.remove('highlight-01');
             let hero = userObj[0];
             hero.position = currentCell.id;
             // remove highlight from it
