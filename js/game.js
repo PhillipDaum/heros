@@ -97,7 +97,7 @@ function roomGen(r) {
     room.id = "room" + r;
     // figure out how to get it to spawn rooms in the right spot
     document.getElementById("game").appendChild(room);
-    for (var i = 0; i < 256; i++) {
+    for (var i = 0; i < 144; i++) {
         let cell = document.createElement('div');
         cell.className = "cell";
         cell.id = "cell-" + i;

@@ -85,11 +85,11 @@ h3 {
     display: grid;
     gap: none;
     margin: auto;
-    height: 48rem;
-    width: 48rem;
+    height: 36rem;
+    width: 36rem;
     box-shadow: 2rem 2rem 2rem .2rem;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
 }
 
 .cell {

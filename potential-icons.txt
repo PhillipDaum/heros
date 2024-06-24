@@ -1,0 +1,46 @@
+<i class="fa-solid fa-user"></i>
+
+<i class="fa-solid fa-heart"></i>
+<i class="fa-regular fa-heart"></i>
+
+
+<i class="fa-solid fa-bomb"></i>
+
+<i class="fa-solid fa-hippo"></i>
+
+<i class="fa-solid fa-paperclip"></i>
+
+<i class="fa-solid fa-ghost"></i>
+
+<i class="fa-solid fa-trash"></i>
+
+<i class="fa-solid fa-trash"></i>
+
+<i class="fa-solid fa-hand"></i>
+
+<i class="fa-solid fa-key"></i>
+
+<i class="fa-solid fa-snowflake"></i>
+
+<i class="fa-solid fa-store"></i>
+
+<i class="fa-solid fa-snowflake"></i>
+
+
+
+<i class="fa-solid fa-robot"></i>
+
+
+<i class="fa-solid fa-user-ninja"></i>
+
+<i class="fa-solid fa-trowel"></i>
+
+<i class="fa-solid fa-toolbox"></i>
+
+<i class="fa-solid fa-spaghetti-monster-flying"></i>
+
+<i class="fa-solid fa-snowman"></i>
+
+<i class="fa-solid fa-horse"></i>
+
+<i class="fa-solid fa-dungeon"></i>
